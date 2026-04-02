@@ -1,0 +1,82 @@
+body{
+font-family:Trebuchet MS;
+margin:0;
+}
+
+/* INTRO PAGE */
+
+#intro{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffffff;
+}
+
+.slide{
+display:none;
+text-align:center;
+}
+
+.slide.active{
+display:block;
+}
+
+.slide button{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#7ed957;
+font-weight:bold;
+cursor:pointer;
+}
+
+
+/* MAIN WEBSITE */
+
+#app{
+display:none;
+background:linear-gradient(to right,#d4f8d4,#f0fff0);
+height:100vh;
+}
+
+header{
+background:#7ed957;
+padding:20px;
+text-align:center;
+}
+
+nav button{
+margin:5px;
+padding:10px 18px;
+border:none;
+border-radius:20px;
+background:#a8e6a1;
+}
+
+.budget{
+text-align:center;
+margin-top:40px;
+}
+
+.card{
+background:white;
+width:320px;
+margin:auto;
+padding:20px;
+border-radius:15px;
+}
+
+.card input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.card button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:20px;
+background:#7ed957;
+}

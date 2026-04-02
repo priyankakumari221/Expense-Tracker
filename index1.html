@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header>
+    <h1>💰 Expense Tracker</h1>
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('addExpense')">Add Expense</button>
+        <button onclick="showPage('viewExpense')">View Expenses</button>
+        <button onclick="showPage('reminder')">Reminders</button>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page">
+    <h2>Monthly Budget</h2>
+    <form id="budgetForm">
+        <label>Enter Monthly Budget (₹):</label>
+        <input type="number" id="monthlyBudget" required>
+        <button type="submit">Save Budget</button>
+    </form>
+
+    <h3>Total Spent: ₹ <span id="totalSpent">0</span></h3>
+    <h3>Remaining: ₹ <span id="remainingAmount">0</span></h3>
+    <h3>Percentage Used: <span id="percentageUsed">0</span>%</h3>
+</section>
+
+<!-- ADD EXPENSE -->
+<section id="addExpense" class="page hidden">
+    <h2>Add Expense</h2>
+    <form id="expenseForm">
+        <label>Title:</label>
+        <input type="text" id="title" required>
+
+        <label>Amount:</label>
+        <input type="number" id="amount" required>
+
+        <label>Category:</label>
+        <input type="text" id="category" required>
+
+        <button type="submit">Add Expense</button>
+    </form>
+</section>
+
+<!-- VIEW EXPENSE -->
+<section id="viewExpense" class="page hidden">
+    <h2>All Expenses</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="expenseTable"></tbody>
+    </table>
+</section>
+
+<!-- REMINDER -->
+<section id="reminder" class="page hidden">
+    <h2>Reminders</h2>
+    <form id="reminderForm">
+        <label>Reminder Title:</label>
+        <input type="text" id="reminderTitle" required>
+
+        <label>Date:</label>
+        <input type="date" id="reminderDate" required>
+
+        <button type="submit">Add Reminder</button>
+    </form>
+
+    <ul id="reminderList"></ul>
+</section>
+
+<script src="script1.js"></script>
+</body>
+</html>
